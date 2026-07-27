@@ -26,6 +26,7 @@ This project was built from scratch as a personal learning project to deeply und
 
 ## Project Structure
 
+```text
 euromacro-sentinel/
 ├── src/
 │   └── main.py          # Main agent loop
