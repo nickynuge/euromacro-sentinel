@@ -1,41 +1,62 @@
-# EuroMacro Sentinel
+EuroMacro Sentinel
+An AI-powered research agent focused on European macro and geopolitical developments.
+It monitors events, distills market sentiment, connects seemingly unrelated developments, and produces structured analysis relevant to European trading hours.
+Motivation
+This project was built from scratch as a personal learning project to deeply understand large language models, tool-using agents, and real-time macro/geopolitical analysis. The goal was to go beyond simple chatbots and build something that can actively gather information, reason over it, and produce trader-relevant insight.
+Features
 
-An AI-powered research agent designed to support Flow Macro style analysis focused on European market hours.
+Professional analyst persona focused on European market hours
+Conversation memory
+Web search tool for current geopolitical and macro news
+Economic calendar tool for upcoming data releases and central bank events
+One-command Daily Brief generation
+Custom agent loop with tool selection and multi-step reasoning
 
-## What it does
+Tech Stack
 
-- Monitors geopolitical and macroeconomic developments
-- Distills market sentiment
-- Connects seemingly unrelated events
-- Produces structured analysis and a Daily Brief for European trading hours
+Python
+Groq (Llama 3.3 70B)
+Tavily Search API
+Custom agent orchestration (no heavy frameworks)
 
-## Motivation
+Project Structure
+euromacro-sentinel/
+├── src/
+│   └── main.py          # Main agent loop
+├── .env                 # API keys (not committed)
+├── .gitignore
+├── requirements.txt
+└── README.md
+How to Run
 
-This project was built from scratch as a personal learning project to deeply understand LLMs, tool-using agents, and real-time macro/geopolitical analysis — inspired by the Junior Strategy & Operations Analyst (Flow Macro) role.
+Clone the repository
+Create and activate a virtual environment
+Install dependencies:
+pip install -r requirements.txt
+Create a .env file with your API keys:
+GROQ_API_KEY=your_key
+TAVILY_API_KEY=your_key
+Run the agent:
+python src/main.py
 
-## Features
+Usage
 
-- Professional Flow Macro analyst persona
-- Conversation memory
-- Web search tool (Tavily)
-- Economic calendar tool
-- One-command Daily Brief generation
+Type any question about geopolitics, macro events, or European markets
+Type brief to generate a structured Daily Brief
+Type exit to quit
 
-## Tech Stack
+Status
+Core agent is working. Current focus areas for improvement:
 
-- Python
-- Groq (Llama 3.3 70B)
-- Tavily Search
-- Custom agent loop with tool calling
+Better tool selection and query quality
+Stronger structured output for analysis
+Expanded research capabilities
+Cleaner modular code structure
 
-## How to run
+What I Learned
 
-1. Clone the repository
-2. Create a virtual environment
-3. Install dependencies: `pip install -r requirements.txt`
-4. Add your API keys to a `.env` file
-5. Run: `python src/main.py`
-
-## Status
-
-Active development – core agent is working. Next steps include improved prompting, better tool reliability, and expanded research capabilities.
+How to build a tool-using agent from scratch
+Prompt design for reliable tool calling
+Managing conversation memory
+Integrating external search into an LLM workflow
+Turning open-ended research questions into structured market-relevant analysis
